@@ -4,7 +4,11 @@ const resolvers = {
     // get all tracks, will be used to populate the homepage grid of our web client
     tracksForHome: (_, __, { dataSources }) => {
       return dataSources.trackAPI.getTracksForHome();
-    }
+    },
+    // get a single track by ID, for the track page
+    track: (_, { id }, { dataSources }) => {
+      return dataSources.trackAPI.getTrack(id);
+    },
   },
   Track: {
     author: ({ authorId }, _, { dataSources }) => {
