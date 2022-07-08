@@ -6,6 +6,7 @@ const typeDefs = gql`
 type Query {
   "Get tracks array for homepage grid"
   tracksForHome: [Track!]!
+  "Fetch a specific track, provided a track's ID"
   track(id: ID!): Track
 }
 
@@ -29,7 +30,6 @@ type Track {
   "The track's complete array of Modules"
   modules: [Module!]!
 }
-
 
 "Author of a complete Track"
 type Author {
