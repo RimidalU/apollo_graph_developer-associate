@@ -1,7 +1,7 @@
 const { ApolloServer, MocksList } = require('apollo-server');
-const typeDefs = require('./schema');
-const resolvers = require('./resolvers');
-const TrackAPI = require('./datasources/track-api');
+const typeDefs = require('./src/schema');
+const resolvers = require('./src/resolvers');
+const TrackAPI = require('./src/datasources/track-api');
 
 const server = new ApolloServer({
   typeDefs,
@@ -14,7 +14,7 @@ const server = new ApolloServer({
 });
 
 
-server.listen().then(() => {
+server.listen({ port: process.env.PORT || 4000 }).then(() => {
   console.log(`
     🚀  Server is running!
     🔉  Listening on port 4000
