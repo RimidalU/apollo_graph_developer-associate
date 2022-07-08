@@ -21,4 +21,3 @@ server.listen().then(() => {
     📭  Query at https://studio.apollographql.com/dev
   `);
 });
-Footer
