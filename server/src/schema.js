@@ -43,6 +43,8 @@ type Track {
   description: String
   "The number of times a track has been viewed"
   numberOfViews: Int
+  "The track's full duration, in seconds"
+  durationInSeconds: Int
   "The track's complete array of Modules"
   modules: [Module!]!
 }
@@ -63,6 +65,8 @@ type Module {
   title: String!
   "The Module's length in minutes"
   length: Int
+  "The module's video duration, in seconds"
+  durationInSeconds: Int
 }
 `;
 module.exports = typeDefs;
